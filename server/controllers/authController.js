@@ -80,7 +80,7 @@ const signin = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: user.user_id },
+      { id: user.id },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
@@ -103,7 +103,7 @@ const profile = async (req, res) => {
     const userId = req.user.id;
 
     const result = await pool.query(
-      "SELECT user_id, name, email FROM users WHERE user_id = $1",
+      "SELECT id, name, email FROM users WHERE id = $1",
       [userId]
     );
 
