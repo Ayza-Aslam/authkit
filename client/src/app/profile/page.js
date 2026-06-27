@@ -21,7 +21,7 @@ export default function Profile() {
         return;
       }
 
-      const response = await fetch("http://localhost:3000/profile", {
+     const response = await fetch("https://authkit-production-cd31.up.railway.app/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
