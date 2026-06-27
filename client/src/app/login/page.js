@@ -24,7 +24,7 @@ export default function Login() {
     
 
     try {
-      const response = await fetch("http://localhost:3000/signin", {
+      const response = await fetch("https://authkit-production-cd31.up.railway.app/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
